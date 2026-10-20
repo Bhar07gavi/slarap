@@ -1,0 +1,23 @@
+{
+  "name": "system_health_check",
+  "mode": "parallel",
+  "max_workers": 3,
+  "tasks": [
+    {
+      "name": "disk_usage",
+      "command": "df -h"
+    },
+    {
+      "name": "memory_info",
+      "command": "free -h"
+    },
+    {
+      "name": "uptime_load",
+      "command": "uptime"
+    },
+    {
+      "name": "top_cpu",
+      "command": "ps -eo pid,comm,%cpu --sort=-%cpu | head -8"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "name": "system_health",
+  "mode": "parallel",
+  "max_workers": 3,
+  "tasks": [
+    {
+      "name": "disk_usage",
+      "command": "df -h"
+    },
+    {
+      "name": "memory_status",
+      "command": "free -h"
+    },
+    {
+      "name": "cpu_load",
+      "command": "uptime"
+    },
+    {
+      "name": "top_cpu_processes",
+      "command": "ps -eo pid,comm,%cpu --sort=-%cpu | head -8"
+    },
+    {
+      "name": "open_ports",
+      "command": "ss -tuln | head -15",
+      "continue_on_error": true
+    }
+  ]
+}

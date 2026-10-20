@@ -1,0 +1,13 @@
+timestamp,date_time,workflow,task_name,command,execution_mode,status,exit_code,attempts,duration,process_id,output
+1788286455.8677025,2026-09-01 18:14:15,scheduled,test_job,echo Scheduled task executed,scheduled,SUCCESS,0,1,0.006,4843,"Scheduled task executed
+"
+1788286453.7426505,2026-09-01 18:14:13,parallel_test,sleep_1,sleep 2,parallel,SUCCESS,0,1,2.005,4840,
+1788286453.7422965,2026-09-01 18:14:13,parallel_test,sleep_2,sleep 2,parallel,SUCCESS,0,1,2.005,4839,
+1788286453.741639,2026-09-01 18:14:13,parallel_test,sleep_0,sleep 2,parallel,SUCCESS,0,1,2.004,4838,
+1788286451.692319,2026-09-01 18:14:11,sequential_test,sleep_2,sleep 2,sequential,SUCCESS,0,1,2.007,4834,
+1788286449.6272857,2026-09-01 18:14:09,sequential_test,sleep_1,sleep 2,sequential,SUCCESS,0,1,2.006,4833,
+1788286447.5641358,2026-09-01 18:14:07,sequential_test,sleep_0,sleep 2,sequential,SUCCESS,0,1,2.007,4832,
+1788286445.5297866,2026-09-01 18:14:05,adhoc,fail_test,exit 1,sequential,FAILED,127,3,0.086,4831,"[exec-error] [Errno 2] No such file or directory
+"
+1788286443.254674,2026-09-01 18:14:03,adhoc,echo_test,echo Automation works!,sequential,SUCCESS,0,1,0.006,4828,"Automation works!
+"

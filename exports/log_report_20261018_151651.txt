@@ -1,0 +1,39 @@
+======================================================================
+LOG ANALYSIS REPORT
+======================================================================
+
+-- SOURCE STATISTICS -------------------------------------------------
+  syslog     lines=4000   errors=105   warnings=23
+  auth       lines=674    errors=0     warnings=0
+  kernel     lines=3728   errors=122   warnings=0
+  dpkg       lines=4000   errors=9     warnings=0
+
+Total errors    : 236
+Total warnings  : 23
+Failed logins   : 0
+OOM events      : 0
+
+-- TOP 10 RECURRING ISSUES -----------------------------------------
+  [  28x] N-N-18T15:N:N.N+N:N LAPTOP-0INSTR3N kernel: misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed:
+  [  18x] N-N-12T09:N:N.N+N:N LAPTOP-0INSTR3N kernel: misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed:
+  [  14x] N-N-18T15:N:N.N+N:N LAPTOP-0INSTR3N kernel: misc dxg: dxgk: dxgkio_is_feature_enabled: Ioctl failed:
+  [  14x] N-N-18T15:N:N.N+N:N LAPTOP-0INSTR3N kernel: message repeated N times: [ misc dxg: dxgk: dxgkio_query
+  [   7x] N-N-12T09:N:N.N+N:N LAPTOP-0INSTR3N kernel: misc dxg: dxgk: dxgkio_is_feature_enabled: Ioctl failed:
+  [   7x] N-N-18T15:N:N.N+N:N LAPTOP-0INSTR3N sh[]: /bin/sh: N: cannot create /proc/sys/fs/binfmt_misc/WSLInte
+  [   7x] N-N-18T15:N:N.N+N:N LAPTOP-0INSTR3N systemd[]: apport-autoreport.path - Process error reports when a
+  [   7x] N-N-18T15:N:N.N+N:N LAPTOP-0INSTR3N systemd[]: apport-autoreport.timer - Process error reports when 
+  [   6x] N-N-18T15:N:N.N+N:N LAPTOP-0INSTR3N kernel: systemd-journald[]: Failed to read journal file /var/log
+  [   5x] N-N-12T09:N:N.N+N:N LAPTOP-0INSTR3N kernel: message repeated N times: [ misc dxg: dxgk: dxgkio_query
+
+-- SUDO COMMANDS (last 10) --------------------------------------------
+  asus -> /usr/bin/apt update
+  asus -> /usr/bin/apt install -y python3 python3-pip python3-venv
+  asus -> /usr/bin/apt update
+  asus -> /usr/bin/apt install -y python3-venv python3-full
+  asus -> /usr/bin/rm /etc/resolv.conf
+  asus -> /usr/bin/sh -c 'echo "nameserver 8.8.8.8" > /etc/resolv.conf'
+  asus -> /usr/bin/sh -c 'echo "nameserver 1.1.1.1" >> /etc/resolv.conf'
+
+-- SECURITY EVENTS ---------------------------------------------------
+  New user created: asus
+======================================================================

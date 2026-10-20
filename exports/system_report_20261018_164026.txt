@@ -1,0 +1,118 @@
+========================================================================
+   SLARAP — SYSTEM PERFORMANCE REPORT
+   Generated: 2026-10-18 16:40:26
+========================================================================
+
+[ CURRENT SYSTEM STATE ]
+  Health Score : 100/100 (EXCELLENT)
+  CPU          : 0.8%  (16 cores)
+  Memory       : 7.0%  (0.53/7.6 GB)
+  Swap         : 0.0%
+  Disk (/)    : 0.3%  (952.52 GB free of 1006.85 GB)
+  Load Average : (0.20361328125, 0.05859375, 0.01806640625)
+  Processes    : 22
+  Network      : up 0.0 KB/s / down 0.0 KB/s
+  Uptime       : 0d 0h 0m
+
+[ HISTORICAL SUMMARY — last 24h ]
+  Samples: 54
+  CPU  avg 0.2%  min 0.0%  max 0.8%
+  MEM  avg 7.6%  min 7.0%  max 8.7%
+
+[ HOURLY BREAKDOWN ]
+  2026-10-18 15  CPU avg  0.27% max   0.8% | MEM avg  7.68% | samples 30
+  2026-10-18 16  CPU avg  0.19% max   0.8% | MEM avg  7.46% | samples 24
+
+[ TOP PROCESSES BY CPU ]
+      446  python3                  CPU  18.8%  MEM   0.4%
+        1  systemd                  CPU   0.0%  MEM   0.2%
+        2  init-systemd(Ub          CPU   0.0%  MEM   0.0%
+        7  init                     CPU   0.0%  MEM   0.0%
+       43  systemd-journald         CPU   0.0%  MEM   0.2%
+       92  systemd-udevd            CPU   0.0%  MEM   0.1%
+      105  systemd-resolved         CPU   0.0%  MEM   0.2%
+      112  systemd-timesyncd        CPU   0.0%  MEM   0.1%
+      177  cron                     CPU   0.0%  MEM   0.0%
+      178  dbus-daemon              CPU   0.0%  MEM   0.1%
+
+[ RECENT ALERTS ]
+  2026-10-18 16:39:38  [WARNING ] security     New user created: asus
+  2026-10-18 15:16:03  [WARNING ] security     New user created: asus
+  2026-10-14 06:13:02  [WARNING ] security     New user created: asus
+  2026-10-14 06:04:35  [WARNING ] security     New user created: asus
+  2026-09-01 19:01:40  [WARNING ] security     New user created: asus
+  2026-09-01 18:49:00  [WARNING ] security     New user created: asus
+  2026-09-01 18:48:12  [WARNING ] security     New user created: asus
+  2026-09-01 18:46:11  [WARNING ] security     New user created: asus
+  2026-09-01 18:44:57  [WARNING ] security     New user created: asus
+  2026-09-01 18:43:00  [WARNING ] security     New user created: asus
+
+[ AUTOMATION LOG ]
+  2026-10-18 16:40:00  SUCCESS  test_job                 exit=0    0.006s
+  2026-10-18 16:39:58  SUCCESS  sleep_2                  exit=0    2.012s
+  2026-10-18 16:39:58  SUCCESS  sleep_0                  exit=0    2.012s
+  2026-10-18 16:39:58  SUCCESS  sleep_1                  exit=0    2.01s
+  2026-10-18 16:39:55  SUCCESS  sleep_2                  exit=0    2.004s
+  2026-10-18 16:39:53  SUCCESS  sleep_1                  exit=0    2.006s
+  2026-10-18 16:39:51  SUCCESS  sleep_0                  exit=0    2.008s
+  2026-10-18 16:39:49  FAILED   fail_test                exit=127  0.123s
+  2026-10-18 16:39:47  SUCCESS  echo_test                exit=0    0.023s
+  2026-10-18 16:33:33  SUCCESS  test_job                 exit=0    0.006s
+
+
+======================================================================
+PREDICTIVE ANALYTICS
+======================================================================
+
+[CPU]
+  Samples   : 54
+  Current   : 0.8%
+  MA(10)    : 0.17%
+  EWMA      : 0.32%
+  Trend     : STABLE  (slope -0.0035/sample)
+  Next      : 0.2%
+  Horizon   : 0.18%  (+10 steps)
+  Curve     : 0 0 0 0 0 0 0 0 0 0
+
+[MEMORY]
+  Samples   : 54
+  Current   : 7.0%
+  MA(10)    : 7.01%
+  EWMA      : 7.01%
+  Trend     : STABLE  (slope -0.0291/sample)
+  Next      : 6.97%
+  Horizon   : 6.81%  (+10 steps)
+  Curve     : 7 7 7 7 7 7 7 7 7 7
+
+[DISK]
+  Samples   : 54
+  Current   : 0.3%
+  MA(10)    : 0.3%
+  EWMA      : 0.3%
+  Trend     : STABLE  (slope 0.0/sample)
+  Next      : 0.3%
+  Horizon   : 0.3%  (+10 steps)
+  Curve     : 0 0 0 0 0 0 0 0 0 0
+  Growth    : 0.0%/day
+======================================================================
+
+
+======================================================================
+INTELLIGENT RECOMMENDATIONS
+======================================================================
+
+1. [HIGH] High CPU process: python3 (PID 446)
+   -> Consuming 63.3% CPU. Review or terminate: kill 446
+
+2. [MEDIUM] Log directory is large
+   -> /var/log ~812 MB. Archive/rotate: sudo logrotate -f /etc/logrotate.conf
+
+3. [MEDIUM] Automation task failing: fail_test
+   -> Failed 3 time(s) in last 24h. Check the command and retry policy.
+
+4. [LOW] Optimal backup window identified
+   -> Lowest average CPU at 16:00 (0.2%). Schedule backups then.
+
+======================================================================
+
+========================================================================

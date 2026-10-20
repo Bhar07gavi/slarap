@@ -1,0 +1,38 @@
+======================================================================
+LOG ANALYSIS REPORT
+======================================================================
+
+-- SOURCE STATISTICS -------------------------------------------------
+  syslog     lines=1509   errors=199   warnings=42
+  auth       lines=79     errors=0     warnings=0
+  kernel     lines=676    errors=156   warnings=0
+  dpkg       lines=4000   errors=7     warnings=0
+
+Total errors    : 362
+Total warnings  : 42
+Failed logins   : 0
+OOM events      : 0
+
+-- TOP 10 RECURRING ISSUES -----------------------------------------
+  [  96x] N-N-01T18:N:N.N+N:N LAPTOP-0INSTR3N kernel: misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed:
+  [  56x] N-N-01T17:N:N.N+N:N LAPTOP-0INSTR3N kernel: misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed:
+  [  48x] N-N-01T18:N:N.N+N:N LAPTOP-0INSTR3N kernel: misc dxg: dxgk: dxgkio_is_feature_enabled: Ioctl failed:
+  [  48x] N-N-01T18:N:N.N+N:N LAPTOP-0INSTR3N kernel: message repeated N times: [ misc dxg: dxgk: dxgkio_query
+  [  28x] N-N-01T17:N:N.N+N:N LAPTOP-0INSTR3N kernel: misc dxg: dxgk: dxgkio_is_feature_enabled: Ioctl failed:
+  [  28x] N-N-01T17:N:N.N+N:N LAPTOP-0INSTR3N kernel: message repeated N times: [ misc dxg: dxgk: dxgkio_query
+  [   8x] N-N-01T18:N:N.N+N:N LAPTOP-0INSTR3N kernel: systemd-journald[]: Failed to read journal file /var/log
+  [   5x] N-N-01T17:N:N.N+N:N LAPTOP-0INSTR3N kernel: systemd-journald[]: Failed to read journal file /var/log
+  [   3x] N-N-01T17:N:N.N+N:N LAPTOP-0INSTR3N systemd[]: Failed to start getty@tty1.service - Getty on tty1.
+  [   2x] N-N-01T17:N:N.N+N:N LAPTOP-0INSTR3N kernel: Command line: initrd=\initrd.img WSL_ROOT_INIT=N panic=-
+
+-- SUDO COMMANDS (last 10) --------------------------------------------
+  asus -> /usr/bin/apt update
+  asus -> /usr/bin/apt install -y python3 python3-pip python3-venv python3-tk sqlite3 tree procps iproute2
+  asus -> /usr/bin/apt update
+  asus -> /usr/bin/apt install -y python3 python3-pip python3-venv python3-full
+  asus -> /usr/bin/apt update
+  asus -> /usr/bin/apt install -y python3 python3-pip python3-venv python3-full
+
+-- SECURITY EVENTS ---------------------------------------------------
+  New user created: asus
+======================================================================
