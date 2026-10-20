@@ -1,0 +1,33 @@
+# Virtual environment
+.venv/
+venv/
+env/
+
+# Python caches
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+*.egg
+
+# Local data and exports (generated files)
+data/*.db
+data/*.json
+exports/
+workflows/*.json
+
+# System files
+.DS_Store
+*.swp
+*.swo
+.env
+.env.*
+!.env.example
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+node_modules/
+web/node_modules/
+web/dist/
+.pytest_cache/
