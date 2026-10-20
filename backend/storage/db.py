@@ -89,6 +89,7 @@ ON alerts(timestamp);
 
 CREATE INDEX IF NOT EXISTS index_task_runs_timestamp
 ON task_runs(timestamp);
+<<<<<<< HEAD
 
 CREATE TABLE IF NOT EXISTS user_progress (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -120,6 +121,8 @@ CREATE TABLE IF NOT EXISTS user_profile (
     streak_days INTEGER NOT NULL DEFAULT 1,
     last_active REAL NOT NULL
 );
+=======
+>>>>>>> b7523b19fc51482547035497989494b20e12869c
 """
 
 
@@ -353,6 +356,7 @@ def aggregate(seconds: float, bucket: str = "hour") -> list[dict]:
         (time.time() - seconds,),
     )
     return rows
+<<<<<<< HEAD
 
 
 def insert_log_event(
@@ -620,3 +624,5 @@ def reset_gamification() -> None:
         (time.time(),),
     )
 
+=======
+>>>>>>> b7523b19fc51482547035497989494b20e12869c

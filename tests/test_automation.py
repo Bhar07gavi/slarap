@@ -113,9 +113,14 @@ def test_scheduler() -> None:
     for j in jobs:
         print(f"Job '{j['name']}' runs: {j['runs']}")
 
+<<<<<<< HEAD
     assert len(list(jobs)) >= 1, "Should have at least 1 job"
     assert any(j["id"] == job["id"] and j["runs"] >= 1 for j in jobs), "Job should have executed"
     scheduler.remove_job(job["id"])
+=======
+    assert len(list(jobs)) == 1, "Should have 1 job"
+    assert list(jobs)[0]["runs"] >= 1, "Job should have executed"
+>>>>>>> b7523b19fc51482547035497989494b20e12869c
     print("PASSED: Scheduler thread executed the job.")
 
 
